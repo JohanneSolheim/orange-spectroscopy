@@ -52,6 +52,8 @@ class TestME_EMSC(unittest.TestCase):
 
         cls.RMSE_std = np.loadtxt(path2data7, usecols=(1,), delimiter=",", dtype="float")
 
+        print(cls.wnM.shape)
+        print(cls.Matrigel.shape)
         domain_reference = Orange.data.Domain([Orange.data.ContinuousVariable(str(w))
                                          for w in cls.wnM])
         cls.reference = Orange.data.Table(domain_reference, cls.Matrigel)
